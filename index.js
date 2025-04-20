@@ -32,7 +32,7 @@ app.use("/api/company", companyRoute)
 app.use("/api/job", jobRoute)
 app.use("/api/application", applicationRoute)
 
-app.listen(port, () => {
+app.listen(port, (req, res) => {
   connectDB();
   res.json("Server running on port", port);
 });
